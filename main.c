@@ -1,0 +1,4 @@
+main(){
+fact();
+sort();
+}
