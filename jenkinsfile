@@ -13,7 +13,10 @@ pipeline {
          stage('copying artifacts') {
             steps {
                  git branch: 'main', url: 'https://github.com/vinay542486/pem.git'
-                 sh '''ls'''
+                 sh '''ls
+                 chmod 400 jenkins.pem
+                 ssh -i jenkins.pem ec2-user@172.31.33.18'''
+                 
             }
         }
     }
