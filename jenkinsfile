@@ -12,7 +12,7 @@ pipeline {
                 }
          stage('copying artifacts') {
             steps {
-                    sh '''cd ../../../../..
+                    sh '''cd ../../../../
                     pwd'''
             }
         }
