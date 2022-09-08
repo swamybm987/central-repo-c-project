@@ -12,7 +12,8 @@ pipeline {
                 }
          stage('copying artifacts') {
             steps {
-                    sh '''ssh -i /home/ec2-user/jenkins.pem  ec2-user@172.31.33.18'''
+                    sh '''cd ../../../../..
+                    pwd'''
             }
         }
     }
