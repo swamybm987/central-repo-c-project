@@ -12,7 +12,8 @@ pipeline {
                 }
          stage('copying artifacts') {
             steps {
-                    sh '''cp -r /var/lib/jenkins/workspace/cprojassig/*.o /home/ec2-user'''
+                    sh '''chmod 777 *.o
+                           cp -r /var/lib/jenkins/workspace/cprojassig/*.o /home/ec2-user'''
             }
         }
     }
