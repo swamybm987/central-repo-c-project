@@ -14,7 +14,6 @@ pipeline {
             steps {
                     sh ''' 
                        scp  /var/lib/jenkins/workspace/cprojassig/*.o ec2-user@172.31.33.18:/home/ec2-user/
-                     
                     ''' 
             }
         }
