@@ -12,9 +12,10 @@ pipeline {
                 }
          stage('copying artifacts') {
             steps {
-                    sh '''cd 
-                          pwd
-                    '''
+                    sshagent (credentials: ['6f6ff3af-3a02-4a96-a4d3-f102abf04d79']) {
+                    sh 'ssh -o StrictHostKeyChecking no ec2-user@172.31.33.18 uptime'
+                    sh 'ssh -v ec2-user@172.31.33.18'
+                    }
             }
         }
     }
