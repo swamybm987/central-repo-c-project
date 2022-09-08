@@ -3,8 +3,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                git branch: 'main', url: 'https://github.com/vinay542486/testrepo.git'
                     sh ''' 
-                       make /var/lib/jenkins/workspace/cprojassig
+                       cd /var/lib/jenkins/workspace/cprojassig
+                       make ABC.exe
                     ''' 
             }
         }
