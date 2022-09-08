@@ -13,8 +13,8 @@ pipeline {
          stage('copying artifacts') {
             steps {
                     sh '''cd ../../../../../..
-                    cd ec2-user
-                    pwd'''
+                    pwd
+                    '''
             }
         }
     }
